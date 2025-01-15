@@ -18,6 +18,11 @@ export const routes: RouteConfig[] = [
     protected: false,
   },
   {
+    path: '/topics',
+    component: Topics,
+    protected: false,
+  },
+  {
     path: '/topics/:topicId',
     component: TopicMCQs,
     protected: true,

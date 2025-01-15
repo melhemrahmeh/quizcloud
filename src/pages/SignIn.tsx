@@ -16,7 +16,7 @@ const SignIn: React.FC = () => {
     setError(null);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/topics');
+      navigate('/');
     } catch (err: any) {
       setError(getAuthErrorMessage(err.code));
     }
