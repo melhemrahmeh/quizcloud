@@ -3,18 +3,20 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { getAuthErrorMessage } from '../utils/firebaseErrors';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert('Successfully signed in!');
+      navigate('/topics');
     } catch (err: any) {
       setError(getAuthErrorMessage(err.code));
     }
@@ -22,10 +24,7 @@ const SignIn: React.FC = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <form
-        onSubmit={handleSignIn}
-        className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg"
-      >
+      <form onSubmit={handleSignIn} className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Welcome Back</h2>
         {error && <p className="text-sm text-red-500 mb-4">{error}</p>}
         <div className="mb-4">
