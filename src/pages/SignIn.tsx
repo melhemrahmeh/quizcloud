@@ -24,7 +24,7 @@ const SignIn: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <form onSubmit={handleSignIn} className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Welcome Back</h2>
+        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">Welcome Back!</h2>
         {error && <p className="text-sm text-red-500 mb-4">{error}</p>}
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
