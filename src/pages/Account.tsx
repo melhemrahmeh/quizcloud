@@ -1,4 +1,3 @@
-// src/pages/Account.tsx
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { updatePassword, updateEmail } from 'firebase/auth';

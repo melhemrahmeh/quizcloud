@@ -1,4 +1,3 @@
-// src/pages/Dashboard.tsx
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import SessionTimeout from '../components/SessionTimeout';

@@ -1,4 +1,3 @@
-// src/utils/firebaseErrors.ts
 export const getAuthErrorMessage = (errorCode: string): string => {
     const messages: { [key: string]: string } = {
       "auth/email-already-in-use": "The email address is already in use. Please use a different email.",

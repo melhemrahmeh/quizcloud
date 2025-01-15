@@ -1,11 +1,9 @@
-// src/pages/Profile.tsx
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 
 const Profile: React.FC = () => {
   const { user } = useAuth();
 
-  // Example data; replace with data from a database or backend
   const progress = {
     completedQuizzes: 12,
     averageScore: 85,
