@@ -3,22 +3,22 @@ import { Link } from 'react-router-dom';
 
 const categories = [
   {
-    university: "Harvard University",
+    university: "AWS Certifications",
     topics: [
       {
-        id: "aws",
-        name: "AWS Certification",
-        description: "Prepare for AWS certifications with these MCQs.",
+        id: "aws-clf02",
+        name: "AWS Cloud Practitioner",
+        description: "Prepare for AWS Cloud Practitioner certification with these MCQs.",
       },
       {
-        id: "python",
-        name: "Python Fundamentals",
-        description: "Learn Python basics and advanced concepts.",
+        id: "aws-aif02",
+        name: "AWS AI practitioner",
+        description: "Prepare for AWS AI Practitioner certification with these MCQs",
       },
     ],
   },
   {
-    university: "Stanford University",
+    university: "American University of Beirut",
     topics: [
       {
         id: "javascript",
